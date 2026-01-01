@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import './Lightning.css';
 
 interface LightningProps {
   hue?: number;
@@ -196,7 +195,7 @@ const Lightning: React.FC<LightningProps> = ({ hue = 230, xOffset = 0, speed = 1
     };
   }, [hue, xOffset, speed, intensity, size]);
 
-  return <canvas ref={canvasRef} className="lightning-container" />;
+  return <canvas ref={canvasRef} className="w-full h-full relative" />;
 };
 
 export default Lightning;

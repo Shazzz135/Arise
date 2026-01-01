@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@layer utilities {
+  .fade-transition { will-change: opacity; }
+  .fade-in { opacity: 1 !important; }
+  .fade-out { opacity: 0 !important; }
+}
