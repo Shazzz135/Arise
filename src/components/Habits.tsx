@@ -1,4 +1,4 @@
-function Group() {
+function Habits() {
 
     return ( 
 
@@ -7,4 +7,4 @@ function Group() {
     );
 }
 
-export default Group;
+export default Habits;

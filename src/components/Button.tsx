@@ -1,9 +1,20 @@
-function Button() {
 
+type ButtonProps = {
+    children: React.ReactNode;
+    onClick?: () => void;
+    className?: string;
+    type?: 'button' | 'submit' | 'reset';
+};
+
+function Button({ children, onClick, className = '', type = 'button' }: ButtonProps) {
     return (
-
-        <button>Click Me</button>
-
+        <button
+            type={type}
+            onClick={onClick}
+            className={className}
+        >
+            {children}
+        </button>
     );
 }
 

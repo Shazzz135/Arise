@@ -1,8 +1,8 @@
-
 import Lightpillar from '../utils/backgrounds/Lightpillar';
 import Navbar from '../components/Navbar';
+import Form from '../components/Form';
 
-function Home() {
+function Create() {
     return (
         <div className="relative w-screen h-screen overflow-hidden flex items-center justify-center">
             <div className="absolute top-0 left-0 w-full z-20">
@@ -23,13 +23,11 @@ function Home() {
                     mixBlendMode="normal"
                 />
             </div>
-            <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
-                <h1 className="text-6xl md:text-7xl font-extrabold tracking-widest text-white font-[Orbitron,Audiowide,Montserrat,Segoe_UI,Arial,sans-serif] glow-red animate-fade-in">
-                    ARISE
-                </h1>
+            <div className="relative z-10 flex flex-col items-center justify-center w-full h-full p-8 md:p-16 lg:p-24">
+                <Form />
             </div>
         </div>
     );
 }
 
-export default Home
+export default Create;
