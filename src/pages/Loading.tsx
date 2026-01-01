@@ -1,5 +1,5 @@
 
-import Lightning from '../components/backgrounds/Lightning';
+import Lightning from '../utils/backgrounds/Lightning';
 import FadeInText from '../utils/FadeInText';
 
 function Loading() {

@@ -1,13 +1,13 @@
 
-import LightPillar from '../components/backgrounds/lightpillar';
+import Lightpillar from '../utils/backgrounds/Lightpillar';
 
 function Home() {
     return (
         <div className="relative w-screen h-screen overflow-hidden flex items-center justify-center">
             <div className="absolute inset-0 w-full h-full">
-                <LightPillar
-                        topColor="#750101"
-                        bottomColor="#B22222"
+                <Lightpillar
+                    topColor="#750101"
+                    bottomColor="#B22222"
                     intensity={1.0}
                     rotationSpeed={0.5}
                     glowAmount={0.005}
