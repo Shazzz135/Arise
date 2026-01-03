@@ -14,10 +14,9 @@ type DropdownProps = {
   label?: string;
   id?: string;
   required?: boolean;
-  colorIndex?: number; // For themed border/focus
 };
 
-const Dropdown: React.FC<DropdownProps> = ({ options, value, onChange, className = '', label, id, required, colorIndex = 0 }) => {
+const Dropdown: React.FC<DropdownProps> = ({ options, value, onChange, className = '', label, id, required }) => {
   // Use a red from COLORS for the dropdown background and border
   const red = COLORS[0];
   const borderColor = red;
@@ -33,7 +32,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options, value, onChange, className
         onChange={e => onChange(e.target.value)}
         required={required}
       >
-        {options.map((opt: DropdownOption) => (
+        {(options || []).map((opt: DropdownOption) => (
           <option key={opt.value} value={opt.value} style={{ background: '#7a0404', color: 'white' }}>{opt.label}</option>
         ))}
       </select>

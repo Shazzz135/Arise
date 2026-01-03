@@ -1,39 +1,19 @@
-
-
-
-import Button from './Button';
-import { useNavigate, useLocation } from 'react-router-dom';
+// import Button from './Button';
+// import { useNavigate, useLocation } from 'react-router-dom';
+import ProgressBar from "./navbar/ProgressBar";
 
 function Navbar() {
-    const navigate = useNavigate();
-    const location = useLocation();
-    const onFormPage = location.pathname === '/form';
-    const handleNewGroup = () => {
-        navigate('/form');
-    };
-    const handleCancel = () => {
-        navigate('/');
-    };
+    // Removed unused navigate and location
+    // Removed unused onFormPage, handleNewGroup, handleCancel
     return (
         <nav
             className="w-full flex items-center justify-between px-8 py-4 bg-transparent border-b border-white/20 backdrop-blur-md fixed top-0 left-0 z-50"
         >
             <div className="text-xl font-bold tracking-widest text-white">ARISE</div>
-            {onFormPage ? (
-                <Button
-                    className="px-2 py-1 text-sm bg-[#7a0404] bg-opacity-50 text-white rounded-md font-semibold shadow hover:bg-[#7a0404] hover:bg-opacity-70 transition-colors duration-200 backdrop-blur-sm border border-white/40"
-                    onClick={handleCancel}
-                >
-                    Cancel
-                </Button>
-            ) : (
-                <Button
-                    className="px-2 py-1 text-sm bg-[#7a0404] bg-opacity-50 text-white rounded-md font-semibold shadow hover:bg-[#7a0404] hover:bg-opacity-70 transition-colors duration-200 backdrop-blur-sm border border-white/40"
-                    onClick={handleNewGroup}
-                >
-                    Create
-                </Button>
-            )}
+            <div className="flex-1 mr-2 ml-8">
+                <ProgressBar />
+            </div>
+            {/* Cancel button moved to floating button in Create.tsx */}
         </nav>
     );
 }

@@ -1,3 +1,63 @@
+// Area groups for the area dropdown
+export const AREA_OPTIONS = [
+  { label: 'Weight', value: 'weight' },
+  { label: 'Volume', value: 'volume' },
+  { label: 'Time', value: 'time' },
+  { label: 'Length', value: 'distance' },
+  { label: 'Energy', value: 'energy' },
+  { label: 'Unitless', value: 'unitless' },
+  { label: 'Other', value: 'other' },
+];
+
+// Measure options by area
+export const MEASURE_OPTIONS_BY_AREA: { [key: string]: { label: string; value: string }[] } = {
+  weight: [
+    { label: 'Kilograms (kg)', value: 'kg' },
+    { label: 'Grams (g)', value: 'g' },
+    { label: 'Pounds (lbs)', value: 'lbs' },
+    { label: 'Ounces (oz)', value: 'oz' },
+    { label: 'Stones (st)', value: 'st' },
+    { label: 'Milligrams (mg)', value: 'mg' },
+    { label: 'Tons (t)', value: 't' },
+  ],
+  unitless: [
+    { label: 'Unitless', value: 'unitless' },
+  ],
+  volume: [
+    { label: 'Liters (L)', value: 'L' },
+    { label: 'Milliliters (ml)', value: 'ml' },
+    { label: 'Cups', value: 'cups' },
+    { label: 'Fluid Ounces (fl oz)', value: 'fl_oz' },
+    { label: 'Gallons (gal)', value: 'gal' },
+    { label: 'Pints (pt)', value: 'pt' },
+    { label: 'Quarts (qt)', value: 'qt' },
+  ],
+  time: [
+    { label: 'Seconds (s)', value: 's' },
+    { label: 'Minutes (min)', value: 'min' },
+    { label: 'Hours (hr)', value: 'hr' },
+    { label: 'Days (d)', value: 'd' },
+  ],
+  distance: [
+    { label: 'Kilometers (km)', value: 'km' },
+    { label: 'Meters (m)', value: 'm' },
+    { label: 'Miles (mi)', value: 'mi' },
+    { label: 'Yards (yd)', value: 'yd' },
+    { label: 'Feet (ft)', value: 'ft' },
+    { label: 'Inches (in)', value: 'in' },
+    { label: 'Centimeters (cm)', value: 'cm' },
+    { label: 'Millimeters (mm)', value: 'mm' },
+  ],
+  energy: [
+    { label: 'Calories (kcal)', value: 'kcal' },
+    { label: 'Joules (J)', value: 'j' },
+  ],
+  length: [],
+  speed: [],
+  other: [
+    { label: 'Other', value: 'other' },
+  ],
+};
 // Period options for period dropdown
 export const PERIOD_OPTIONS = [
   { label: 'Daily', value: 'daily' },
